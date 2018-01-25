@@ -6,7 +6,7 @@ const Header = () => (
     style={{
       background: 'white',
       marginBottom: '1.45rem',
-      boxShadow: '2px 2px 10px rgba(0,0,0,0.1)',
+      boxShadow: '2px 2px 10px rgba(0,0,0,0.1)'
     }}
   >
     <div
