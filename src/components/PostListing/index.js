@@ -23,7 +23,6 @@ class PostListing extends React.Component {
     }
     render() {
         const postList = this.getPostList();
-        const isHomepage = location.pathname === withPrefix("/");
         return (
             <div className="md-grid md-grid--no-spacing md-cell--middle">
                 <div className="md-grid md-cell--8 mobile-fix">
