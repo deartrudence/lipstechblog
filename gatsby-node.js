@@ -1,9 +1,13 @@
 const path = require('path')
+const _ = require("lodash");
+const webpackLodashPlugin = require("lodash-webpack-plugin");
 
 exports.createPages = ({graphql, boundActionCreators}) => {
 	const {createPage} = boundActionCreators
 	return new Promise((resolve, reject) => {
 		const blogPostTemplate = path.resolve('src/templates/blog-posts.js')
+		const tagPageTemplate = path.resolve('src/templates/tags.js')
+		const personPageTemplate = path.resolve('src/templates/people.js')
 		resolve(
 			graphql(`
 			{
@@ -12,6 +16,10 @@ exports.createPages = ({graphql, boundActionCreators}) => {
 						node {
 							id
 							slug
+							tags
+							author{
+								name
+							}
 						}
 					}
 				}
@@ -20,7 +28,18 @@ exports.createPages = ({graphql, boundActionCreators}) => {
 					alert(result.error)
 					reject(result.errors)
 				}
+				const tagList = []
+				const peopleList = []
 				result.data.allContentfulBlogPost.edges.forEach((edge) => {
+					if(edge.node.tags) {
+						edge.node.tags.forEach(tag => {
+							tagList.push(tag)
+						})
+					}
+					if(edge.node.author){
+						peopleList.push(edge.node.author.name)
+					}
+					console.log(peopleList)
 					createPage({
 						path: edge.node.slug,
 						component: blogPostTemplate,
@@ -29,7 +48,25 @@ exports.createPages = ({graphql, boundActionCreators}) => {
 						}
 					})
 				})
-				return
+				// return
+				tagList.forEach(tag => {
+					createPage({
+						path: `/tags/${_.kebabCase(tag)}`,
+						component: tagPageTemplate,
+						context: {
+							tag
+						}
+					})
+				})
+				peopleList.forEach(person => {
+					createPage({
+						path: `/people/${_.kebabCase(person)}`,
+						component: personPageTemplate,
+						context: {
+							person
+						}
+					})
+				})
 			})
 		)
 	})

@@ -5,7 +5,7 @@ import './index.css'
 const BlogPost = ({node}) => {
   let image_classes = `image  + ${node.size}`
   return (
-    <div className={image_classes}>
+    <div id={node.id} className={image_classes}>
       <img src={node.heroImage.file.url} alt=""/>
       <Link
         to={node.slug}
@@ -18,7 +18,7 @@ const BlogPost = ({node}) => {
 
 }
 const IndexPage = ({data}) => (
-  <div className="wrapper-grid">
+  <div id="indexPage" className="wrapper-grid">
     {data.allContentfulBlogPost.edges.map((edge) => <BlogPost node={edge.node} /> )}
   </div>
 )
@@ -32,6 +32,7 @@ export const pageQuery = graphql`
     }) {
       edges {
         node {
+          id
           size
           title 
           slug

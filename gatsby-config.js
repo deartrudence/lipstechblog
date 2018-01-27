@@ -11,12 +11,13 @@ module.exports = {
         fonts: [`abel`, `gruppo`]
       }
     },
-    {resolve: `gatsby-source-contentful`,
-    options: {
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
       spaceId: process.env.CONTENTFUL_SPACE_ID || '',
       accessToken: process.env.CONTENTFUL_ACCESS_TOKEN || '',
-    }
-  },
+      },
+    },
     'gatsby-plugin-react-helmet',
     `gatsby-transformer-remark`
   ],
