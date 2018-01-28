@@ -11,10 +11,12 @@ class BlogPost extends Component {
 		const {author} = this.props.data.contentfulBlogPost
 		const {id} = this.props.data.contentfulBlogPost
 		const {heroImage} = this.props.data.contentfulBlogPost
+		const {publishDate} = this.props.data.contentfulBlogPost
 		return (
 			<div id={id}>
 				<img src={heroImage.file.url} alt={heroImage.file.fileName}/>
 				<h1>{title}</h1>
+				<p>{publishDate}</p>
 				<PersonCard author={author} />
 				<div dangerouslySetInnerHTML={{ __html: childContentfulBlogPostBodyTextNode.childMarkdownRemark.html }} />
 				<PostTags tags={tags} />
@@ -31,11 +33,14 @@ export default BlogPost
 
 export const pageQuery = graphql`
 	query blogPostQuery($slug: String!){
-		contentfulBlogPost(slug: {eq: $slug}){
+		contentfulBlogPost(
+			slug: {eq: $slug}
+		){
 			id
 			title
 			slug
-			tags,
+			tags
+			publishDate(formatString: "MMMM DD, YYYY")
 			author{
             name
             email

@@ -27,15 +27,17 @@ export default IndexPage
 
 export const pageQuery = graphql`
   query pageQuery {
-    allContentfulBlogPost (filter: {
-      node_locale: {eq: "en-US"}
-    }) {
+    allContentfulBlogPost (
+      filter: {node_locale: {eq: "en-US"}}
+      sort: { order: DESC, fields: [publishDate] }
+  ) {
       edges {
         node {
           id
           size
           title 
           slug
+          publishDate
           heroImage {
             file {
               url

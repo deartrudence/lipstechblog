@@ -10,6 +10,8 @@
     "gatsby-plugin-lodash": "^1.0.8",
     "gatsby-plugin-react-helmet": "^2.0.3",
     "gatsby-transformer-remark": "^1.7.29",
+    "lodash": "^4.17.4",
+    "react-fontawesome": "^1.6.1",
     "react-helmet": "^5.2.0"
   },
   "keywords": [

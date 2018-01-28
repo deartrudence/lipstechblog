@@ -7,9 +7,27 @@ import PostListing from '../components/PostListing'
 
 
 export default class TagTemplate extends React.Component {
+	getPostList() {
+
+		const postList = [];
+		this.props.data.allContentfulBlogPost.edges.forEach(postEdge => {
+			postList.push({
+				path: postEdge.node.slug,
+				title: postEdge.node.title,
+				slug: postEdge.node.slug,
+				description: postEdge.node.description.description,
+				imgUrl: postEdge.node.heroImage.file.url,
+				imgFileName: postEdge.node.heroImage.file.fileName,
+				tags: postEdge.node.tags
+			});
+		});
+		return postList;
+	}
 	render() {
 		const tag = this.props.pathContext.tag;
+		const postList = this.getPostList();
 		const postEdges = this.props.data.allContentfulBlogPost.edges;
+		console.log(postList)
 		return (
 			<div className="tag-container">
 				<h3>{`Posts tagged as "${tag}"`}</h3>
@@ -17,7 +35,7 @@ export default class TagTemplate extends React.Component {
 				<Helmet>
 					<title>{`Posts tagged as "${tag}" | `}</title>
 				</Helmet>
-				<PostListing postEdges={postEdges} />
+				<PostListing postList={postList} />
 			</div>
 		);
 	}
