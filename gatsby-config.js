@@ -8,7 +8,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`abel`, `gruppo`]
+        fonts: [`abel`, `gruppo`, `raleway`]
       }
     },
     {

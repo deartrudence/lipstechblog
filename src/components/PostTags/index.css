@@ -1,0 +1,11 @@
+.tag {
+    background: #000;
+    padding: 8px 12px;
+    color: white;
+    display: inline-block;
+    margin: 10px 16px 0 0;
+    transition: 0.3s;
+}
+.tag:hover {
+    background: linear-gradient(to right, #ee9ca7, #769fa5);
+}

@@ -23,7 +23,7 @@ const Header = () => (
     >
       <h1 style={{ 
         margin: 0 ,
-        fontFamily: 'Gruppo'
+        fontFamily: 'Raleway'
         }}>
         <Link
           to="/"

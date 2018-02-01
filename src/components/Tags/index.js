@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import './index.css'
 
 const Tags = ({node}) => (
     <div>
@@ -9,14 +10,15 @@ const Tags = ({node}) => (
                 fontFamily: 'Gruppo'
             }}>
                 <Link
+                    className="tag"
                     to={node.slug}
                     style={{
                         color: 'black',
-                        textDecoration: 'none',
+                        
                     }}
                 >
                     tag ${node.title}
-        </Link>
+                </Link>
             </h1>
         </div>
     </div>

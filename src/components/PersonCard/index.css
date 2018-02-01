@@ -1,0 +1,37 @@
+.person {
+    clear: both;
+    display: flex;
+    border-top: 1px solid black;
+    padding-top: 30px;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+.person .person-link {
+    margin-right: 30px;
+}
+.person .person-name:hover {
+    color:    #769fa5;
+}
+.person img {
+    width: 100px;
+    border-radius: 50%;
+}
+.social-icons {
+    display: flex;
+    list-style: none;
+    margin: 0;
+}
+.social-icons li {
+    margin-right: 12px;
+}
+.social-icons li a {
+    transition: 0.3s
+}
+.social-icons li a:hover {
+    color: #ee9ca7;
+}
+.social-icons li:last-of-type {
+    margin-right: 0;
+}
