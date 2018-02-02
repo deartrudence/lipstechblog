@@ -33,7 +33,7 @@ export default class PersonTemplate extends React.Component {
 		console.log(postEdges)
 		return (
 			<div>
-				<h3>{`Person ${person}`}</h3>
+				<h3>{`Posts by ${person}`}</h3>
 				{/* <PersonCard author={postEdges.node.author} /> */}
 				<PostListing postList={postList} />
 			</div>

@@ -198,7 +198,7 @@ html {
 }
 body {
   color: hsla(0, 0%, 0%, 0.8);
-  font-family: georgia, serif;
+  font-family: 'Abel', serif;
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
@@ -384,7 +384,8 @@ p {
   padding-top: 0;
   margin-bottom: 1.45rem;
   font-family: 'Abel', sans-serif;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.6px;
+  font-size: 18px;
 }
 figure {
   margin-left: 0;

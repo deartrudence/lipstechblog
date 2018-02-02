@@ -15,7 +15,7 @@ class PersonCard extends Component {
 				</Link>
 				<div className="person-info">
 					<Link to={`/people/${_.kebabCase(author.name)}`} className="person-name"> 
-						<p style={{fontFamily: "Raleway", fontWeight: '700'}}>{author.name}</p>
+						<p style={{fontFamily: "Lato", fontWeight: '700'}}>{author.name}</p>
 					</Link>
 					<ul className="social-icons">
 						<li>
