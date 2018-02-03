@@ -1,6 +1,7 @@
 const path = require('path')
 const _ = require("lodash");
 const webpackLodashPlugin = require("lodash-webpack-plugin");
+const createPaginatedPages = require("gatsby-paginate");
 
 exports.createPages = ({graphql, boundActionCreators}) => {
 	const {createPage} = boundActionCreators
@@ -28,6 +29,14 @@ exports.createPages = ({graphql, boundActionCreators}) => {
 					alert(result.error)
 					reject(result.errors)
 				}
+				createPaginatedPages({
+					edges: result.data.allContentfulBlogPost.edges,
+					createPage: createPage,
+					pageTemplate: "src/templates/index.js",
+					pageLength: 5,
+					pathPrefix: "",
+					context: {}
+				})
 				const tagList = []
 				const peopleList = []
 				result.data.allContentfulBlogPost.edges.forEach((edge) => {

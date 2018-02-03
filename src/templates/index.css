@@ -1,0 +1,117 @@
+.wrapper-grid {
+    display: grid;
+    grid-gap: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 250px;
+    grid-auto-flow: dense;
+    margin-top: 40px;
+}
+@media (max-width: 800px) { 
+    .wrapper-grid{ 
+        grid-template-columns: 1fr;
+    }
+}
+
+.horizontal {
+    grid-column: span 2;
+}
+
+
+.vertical {
+    grid-row: span 2;
+}
+
+.big {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+@media (max-width: 800px) { 
+    .horizontal, .vertical, .big{ 
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+}
+.image {
+    position: relative;
+}
+.overlay {
+    background: rgba(0,0,0,0.2);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display:flex;
+    justify-content: center;
+    align-items: flex-end;
+    color: white;
+    font-family: "Lato", sans-serif;
+    padding: 13%;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 1.8px;
+    font-weight: bold;
+}
+@media (max-width: 800px) { 
+    .overlay{ 
+        visibility: visible;
+        top: 60%;
+        font-size: 16px;
+        z-index: 5;
+        height: 40%;
+        background: unset;
+    }
+}
+.image:hover .overlay{
+    background: rgba(0,0,0,0.5);
+}
+.background {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: blue;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: linear-gradient(to right, #ee9ca7, #769fa5);
+}
+@media (max-width: 800px) { 
+    .background{ 
+        top: 60%;
+        left:0;
+        height: 40%;
+        z-index: 0;
+    }
+}
+
+
+.wrapper-grid > div > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+div.image.individual {
+	height: 250px;
+	width: 250px;
+	float: left;
+  margin: 0 40px 40px 0;
+}
+div.image.individual.vertical {
+	height: 500px;
+}
+div.image.individual.horizontal {
+	width: 500px;
+}
+div.image.individual.big {
+	height: 500px;
+	width: 500px;
+}
+p.blog-content {
+	font-family: 'Abel', sans-serif;
+	font-size: 18px;
+}
+div.image.individual > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

@@ -16,5 +16,28 @@ div.image.individual.vertical {
 	height: 600px;
 }
 div.image.individual.horizontal {
-	width: 600px;
+  width: 600px;
+}
+@media (max-width: 800px) { 
+    div.image.individual{ 
+      width: 100%;
+      height: unset;
+    }
+    div.image.individual.big{ 
+      width: 100%;
+      height: unset;
+    }
+    div.image.individual.vertical {
+      width: 150px;
+      height: 300px;
+    }
+}
+.blog-content a {
+  border-bottom: 3px solid #642b73;
+  padding: 0 3px;
+  transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.blog-content a:hover {
+   background: linear-gradient(to right, #642b73, #c6426e);
+   color: white;
 }

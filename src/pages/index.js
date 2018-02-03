@@ -26,7 +26,7 @@ const IndexPage = ({data}) => (
 export default IndexPage
 
 export const pageQuery = graphql`
-  query pageQuery {
+  query indexQuery {
     allContentfulBlogPost (
       filter: {node_locale: {eq: "en-US"}}
       sort: { order: DESC, fields: [publishDate] }

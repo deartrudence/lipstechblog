@@ -22,7 +22,7 @@ class BlogPost extends Component {
 				<div className={image_classes}>
 					<img src={heroImage.file.url} alt={heroImage.file.fileName}/>
 				</div>
-				<div dangerouslySetInnerHTML={{ __html: childContentfulBlogPostBodyTextNode.childMarkdownRemark.html }} />
+				<div className="blog-content" dangerouslySetInnerHTML={{ __html: childContentfulBlogPostBodyTextNode.childMarkdownRemark.html }} />
 				<PersonCard author={author} />
 				<PostTags tags={tags} />
 			</div>
