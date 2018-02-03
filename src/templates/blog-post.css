@@ -33,11 +33,27 @@ div.image.individual.horizontal {
     }
 }
 .blog-content a {
-  border-bottom: 3px solid #642b73;
+  border-bottom: 3px solid #ee9ca7;
   padding: 0 3px;
-  transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  /* transition: all 5000ms cubic-bezier(0.4, 0, 0.2, 1); */
+  transition: all 0.3s linear;
+  position: relative;
 }
-.blog-content a:hover {
-   background: linear-gradient(to right, #642b73, #c6426e);
-   color: white;
+/* .blog-content a:hover {
+   background: linear-gradient(to right, #ee9ca7 49%,#ffc3a0 100%); 
+} */
+.blog-content a::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  transition: width 0.3s ease;
+  background: linear-gradient(to right, #ee9ca7 49%,#ffc3a0 100%); 
+  z-index: -1;
+}
+
+.blog-content a:hover::after {
+  width: 100%;
 }

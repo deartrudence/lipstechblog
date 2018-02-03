@@ -51,6 +51,7 @@
     line-height: 1.2;
     letter-spacing: 1.8px;
     font-weight: bold;
+    transition: all 0.3s ease;
 }
 @media (max-width: 800px) { 
     .overlay{ 
@@ -73,7 +74,7 @@
     width: 100%;
     height: 100%;
     z-index: -1;
-    background: linear-gradient(to right, #ee9ca7, #769fa5);
+    background: linear-gradient(45deg, #ee9ca7 62%,#ffc3a0 100%); 
 }
 @media (max-width: 800px) { 
     .background{ 

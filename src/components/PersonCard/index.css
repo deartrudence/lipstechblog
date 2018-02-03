@@ -12,11 +12,14 @@ a {
     margin-right: 30px;
 }
 .person .person-name:hover {
-    color:    #769fa5;
+    color:    #ee9ca7;
 }
 .person img {
     width: 100px;
     border-radius: 50%;
+}
+.person img:hover {
+    filter: grayscale(40%);
 }
 .social-icons {
     display: flex;

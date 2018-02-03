@@ -1,11 +1,36 @@
 .tag {
-    background: #000;
     padding: 8px 12px;
+    margin-right: 14px;
     color: white;
     display: inline-block;
-    margin: 10px 16px 0 0;
-    transition: 0.3s;
+    position: relative;
+    z-index: 2;
 }
-.tag:hover {
-    background: linear-gradient(to right, #ee9ca7, #769fa5);
+.tag::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: black; 
+    transition: width 0.3s ease;
+    z-index: -1;
+}
+.tag::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background: linear-gradient(to right, #ee9ca7 49%,#ffc3a0 100%);
+    z-index: -1; 
+    transition: width 0.3s ease;
+}
+.tag:hover::before {
+    /* width: 0; */
+}
+.tag:hover::after {
+    width: 100%;
 }
