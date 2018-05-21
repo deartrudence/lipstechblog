@@ -39,6 +39,7 @@ exports.createPages = ({graphql, boundActionCreators}) => {
 				})
 				const tagList = []
 				const peopleList = []
+				console.log('before each', tagList, peopleList)
 				result.data.allContentfulBlogPost.edges.forEach((edge) => {
 					if(edge.node.tags) {
 						edge.node.tags.forEach(tag => {

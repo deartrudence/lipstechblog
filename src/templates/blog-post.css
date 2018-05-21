@@ -57,3 +57,36 @@ div.image.individual.horizontal {
 .blog-content a:hover::after {
   width: 100%;
 }
+
+.lipstech-site {
+	display: inline-block;
+	position: relative;
+	color: #000;
+	background: #fff;
+  mix-blend-mode: multiply;
+  text-align: center;
+  display: block;
+  font-size: 18px;
+  padding: 50px;
+  font-family: 'Lato';
+}
+
+.lipstech-site:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  /* right: 0;
+  bottom: 0; */
+	left: 0;
+	width: 0;
+	height: 100%;
+  pointer-events: none;
+	background: linear-gradient(to right, #ee9ca7 49%,#ffc3a0 100%);
+	mix-blend-mode: screen;
+	transition: width 0.3s ease;
+}
+
+.lipstech-site:hover:before {
+	width: 100%;
+}

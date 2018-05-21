@@ -25,6 +25,7 @@ class BlogPost extends Component {
 				<div className="blog-content" dangerouslySetInnerHTML={{ __html: childContentfulBlogPostBodyTextNode.childMarkdownRemark.html }} />
 				<PersonCard author={author} />
 				<PostTags tags={tags} />
+				<a className="lipstech-site" href="https://www.lipstech.com" target="_blank">Find makeup inspiration at Lipstech.com</a>
 			</div>
 		)
 	}
