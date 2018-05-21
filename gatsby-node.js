@@ -26,7 +26,7 @@ exports.createPages = ({graphql, boundActionCreators}) => {
 				}
 			} `).then((result) => {
 				if(result.errors){
-					alert(result.error)
+					// alert(result.error)
 					reject(result.errors)
 				}
 				createPaginatedPages({
