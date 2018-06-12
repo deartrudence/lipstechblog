@@ -35,6 +35,7 @@
     position: relative;
 }
 .overlay {
+    font-family: 'josefin sans';
     background: rgba(0,0,0,0.2);
     position: absolute;
     top: 0;
@@ -45,7 +46,6 @@
     justify-content: center;
     align-items: flex-end;
     color: white;
-    font-family: "Lato", sans-serif;
     padding: 13%;
     font-size: 20px;
     line-height: 1.2;

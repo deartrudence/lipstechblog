@@ -1,0 +1,38 @@
+footer {
+  color: white;
+  background: #769fa5;
+  padding: 50px 20px; }
+  footer .footer-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 70%;
+    margin: 0 auto; }
+  footer a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 0;
+    text-shadow: 3px 3px 7px rgba(0, 0, 0, 0.3);
+    transition: 0.3s; }
+    footer a:hover {
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); }
+  footer p {
+    text-shadow: rgba(0, 0, 0, 0.3) 3px 3px 7px; }
+  footer form input {
+    padding: 10px;
+    border: 2px solid #769fa5;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    width: 150px; }
+  footer form input[type=submit] {
+    background: white;
+    border: 2px solid #769fa5;
+    margin-left: 10px;
+    width: unset;
+    color: #769fa5;
+    cursor: pointer; }
+    footer form input[type=submit]:hover {
+      background: #769fa5;
+      border: 2px solid #769fa5;
+      color: white; }

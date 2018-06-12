@@ -24,7 +24,7 @@ const Header = () => (
     >
       <h1 style={{ 
         margin: 0 ,
-        fontFamily: 'Lato'
+        fontFamily: 'Josefin Sans'
         }}>
         <Link
           to="/"
