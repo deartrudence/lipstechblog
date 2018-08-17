@@ -331,7 +331,7 @@ axios@^0.16.1:
     follow-redirects "^1.2.3"
     is-buffer "^1.1.5"
 
-"axios@github:contentful/axios#fix/https-via-http-proxy":
+axios@contentful/axios#fix/https-via-http-proxy:
   version "0.17.1"
   resolved "https://codeload.github.com/contentful/axios/tar.gz/4b06f4a63db3ac16c99f7c61b584ef0e6d11f1af"
   dependencies:
@@ -4494,6 +4494,10 @@ joi@9.0.0-0:
     items "2.x.x"
     moment "2.x.x"
     topo "2.x.x"
+
+jquery@^3.3.1:
+  version "3.3.1"
+  resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.3.1.tgz#958ce29e81c9790f31be7792df5d4d95fc57fbca"
 
 js-base64@^2.1.9:
   version "2.4.2"
