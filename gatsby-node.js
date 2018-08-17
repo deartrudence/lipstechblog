@@ -3,6 +3,7 @@ const _ = require("lodash");
 const webpackLodashPlugin = require("lodash-webpack-plugin");
 const createPaginatedPages = require("gatsby-paginate");
 
+console.log('gatsby node js')
 exports.createPages = ({graphql, boundActionCreators}) => {
 	const {createPage} = boundActionCreators
 	return new Promise((resolve, reject) => {

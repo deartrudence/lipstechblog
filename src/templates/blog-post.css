@@ -17,11 +17,13 @@ div.image.individual.vertical {
 }
 div.image.individual.horizontal {
   width: 600px;
+  max-width: 100%;
 }
 @media (max-width: 800px) { 
     div.image.individual{ 
       width: 100%;
       height: unset;
+      margin:0;
     }
     div.image.individual.big{ 
       width: 100%;
@@ -56,6 +58,13 @@ div.image.individual.horizontal {
 
 .blog-content a:hover::after {
   width: 100%;
+}
+
+.blog_sharable img {
+  box-shadow: 1px 1px 22px rgba(0,0,0, 0.3);
+  max-width: 50%;
+  margin: 0 auto;
+  display: block;
 }
 
 .lipstech-site {

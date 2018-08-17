@@ -42,11 +42,9 @@ class Footer extends Component {
 						<p><a href="https://www.pinterest.ca/lipstech_official/" target="_blank">Pinterest</a></p>
 					</div>
 					<div className="contact">
-						<p>Sign up to get the lastest news!</p>
-						<form action="" id="contact">
-							<input id="email" type="email" placeholder="Email" />
-							<input type="submit" onClick={this.submitEmail} value="Yaaas!" />
-						</form>
+		
+						<form action="https://tinyletter.com/lipstech_official" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/lipstech_official', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true"><p><label htmlFor="tlemail">Sign up to get the lastest news!</label></p><p><input type="text" name="email" id="tlemail" /></p><input type="hidden" value="1" name="embed" /><input type="submit" value="Subscribe" /></form>
+
 					</div>
 				</div>
 			</footer >
