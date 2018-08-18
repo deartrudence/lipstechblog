@@ -35,6 +35,9 @@ const Header = () => (
         >
           Lipstech (blog)
         </Link>
+        <a href="https://lipstech.com">
+         
+        </a>
       </h1>
     </div>
   </div>

@@ -25,3 +25,17 @@ h1:before {
 h1:hover:before {
 	width: 100%;
 }
+
+svg .st0{
+	fill:none;
+	stroke:#000000;
+	stroke-width:4;
+	stroke-linecap:square;
+	stroke-miterlimit:1.5;
+}
+svg .st1{
+	stroke:#000000;
+	stroke-width:6;
+	stroke-linecap:square;
+	stroke-miterlimit:1.5;
+}
